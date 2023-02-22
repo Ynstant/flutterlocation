@@ -1,4 +1,4 @@
-name: ynstant_location
+name: location
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
