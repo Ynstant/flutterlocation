@@ -1,4 +1,4 @@
-name: ynstant-location
+name: location
 
 packages:
   - packages/**
