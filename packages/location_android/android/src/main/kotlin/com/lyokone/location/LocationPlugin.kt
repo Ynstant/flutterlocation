@@ -151,6 +151,7 @@ class LocationPlugin : FlutterPlugin, ActivityAware, LocationListener,
                 .setElaspedRealTimeNanos(location.elapsedRealtimeNanos.toDouble())
                 .setIsMock(location.isFromMockProvider)
                 .setSpeed(location.speed.toDouble())
+                .setSatellites(1.toLong())
                 // .setSatellites(location.extras.getInt("satellites").toLong())
 
 
