@@ -1,3 +1,6 @@
+def DEFAULT_APP_COMPAT_VERSION                  = "1.4.1"
+def DEFAULT_LIFE_CYCLE_RUNTIME_VERSION          = "2.4.1"
+def DEFAULT_LIFE_CYCLE_EXTENSIONS_VERSION       = "2.2.0"
 group 'com.lyokone.location'
 version '1.0-SNAPSHOT'
 
@@ -23,7 +26,9 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
 android {
     compileSdkVersion 31
 
@@ -46,6 +51,10 @@ android {
 }
 
 dependencies {
+    def appCompatVersion = safeExtGet('appCompatVersion', safeExtGet('supportLibVersion', DEFAULT_APP_COMPAT_VERSION))
+    def lifeCycleRuntimeVersion = safeExtGet('lifeCycleRuntimeVersion', DEFAULT_LIFE_CYCLE_RUNTIME_VERSION)
+    def lifeCycleExtensionsVersion = safeExtGet('lifeCycleExtensionsVersion', DEFAULT_LIFE_CYCLE_EXTENSIONS_VERSION)
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:1.4.1"
     implementation "com.google.android.gms:play-services-location:19.0.1"
