@@ -29,10 +29,12 @@ dependencies:
   flutter:
     sdk: flutter
   location_android:
-    git:
-        url: https://github.com/Ynstant/flutterlocation
-        ref: master
-        path: packages/location_android/
+    path: ../location_android/
+  # location_android:
+  #   git:
+  #       url: https://github.com/Ynstant/flutterlocation
+  #       ref: master
+  #       path: packages/location_android/
 # location_android:
 #     path: ../location_android/
   # location_android: ^5.0.0-dev.3
