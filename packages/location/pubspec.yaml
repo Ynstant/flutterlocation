@@ -35,8 +35,8 @@ dependencies:
         url: https://github.com/Ynstant/flutterlocation
         ref: master
         path: .?/packages/location_android/
-# location_android:
-#     path: ../location_android/
+  # location_android:
+  #     path: ../location_android/
   # location_android: ^5.0.0-dev.3
   # location_ios:
   #   path: ../location_ios/
